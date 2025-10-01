@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style5.css ">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <h2 class="logo">LOGO</h2>
+
+            <div class="navmenu" id="dropnav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            
+            <div class="navbtn">
+                <button class="btnlogin" id="logbtn" onclick="login()">SignIn</button>
+                <button class="btnregister" id="regbtn" onclick="register()">SignUp</button>
+            </div>
+            <button class="dropmenu" style="width: 20px; height: 20px;" onclick="myMenuFunction()">
+            </button>
+        </nav>
+
+        <div class="formbox">
+            <form >
+                <div class="registercon" id="register">
+                    <div class="top">
+                        <h2>Sign Up</h2>
+                    </div>
+                    <div class="twoforms">
+                        <div class="inputcon">
+                            <input type="text" class="inputfield" placeholder="Firstname" required>
+                        </div>
+                        <div class="inputcon">
+                            <input type="text" class="inputfield" placeholder="Lastname" required>
+                        </div>
+                    </div>
+                    <div class="inputcon">
+                        <input type="email" class="inputfield" placeholder="Email" required>
+                    </div>
+                    <div class="inputcon">
+                        <input type="password" class="inputfield" placeholder="Password" required>
+                    </div>
+                    <div class="inputcon">
+                        <button type="submit" class="submit" value="register">Register</button>
+                    </div>
+                    <div class="top">
+                        <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+                    </div>
+                    <div class="twocol">
+                        <div class="one">
+                            <input type="checkbox" id="registercheck">
+                            <label for="registercheck">Remember Me</label>
+                        </div>
+                        <div class="two">
+                            <label><a href="#">Terms & conditions</a></label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form>
+                <div class="logincon" id="login">
+                    <div class="top">
+                        <h2>Login</h2>
+                    </div>
+                    <div class="inputcon">
+                        <input type="email" class="inputfield" placeholder="Username or Email" required>
+                    </div>
+                    <div class="inputcon">
+                        <input type="password" class="inputfield" placeholder="Password" required>
+                    </div>
+                    <div class="inputcon">
+                        <button type="submit" class="submit" value="register">Sign In</button>
+                    </div>
+                    <div class="top">
+                        <span>Don't have an account? <a href="#" onclick="register ()">Sign Up</a></span>
+                    </div>
+                    <div class="twocol">
+                        <div class="one">
+                            <input type="checkbox" id="logincheck">
+                            <label for="logincheck">Remember Me</label>
+                        </div>
+                        <div class="two">
+                            <label><a href="#">| Forgot Passord?</a></label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+
+        function myMenuFunction(){
+            var i = document.getElementById("dropnav");
+
+            if(i.className === "navmenu") {
+                i.className += " responsive"
+            } else {
+                i.className = "navmenu"
+            }
+        }
+    </script>
+
+    <script>
+        var a = document.getElementById("logbtn")
+        var b = document.getElementById("regbtn")
+        var x = document.getElementById("login")
+        var y = document.getElementById("register")
+
+        function login() {
+            x.style.left = "14px";
+            y.style.right = "-520px";
+            a.className += " btnlogin";
+            b.className = "btnregister";
+            x.style.opacity = 1;
+            y.style.opacity = 0;
+        }
+        function register() {
+            x.style.left = "-526px";
+            y.style.right = "14px";
+            a.className = "btnregister";
+            b.className += " btnlogin";
+            x.style.opacity = 0;
+            y.style.opacity = 1;
+        }
+    </script>
+</body>
+</html>

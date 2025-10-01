@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; */
+    background: url(/project2/images/lux1.png)no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1em;
+    color:whitesmoke;
+    user-select: none;
+}
+.navmenu ul {
+    display: flex;
+}
+.navmenu ul li{
+    list-style: none;
+}
+.navmenu ul li a {
+    font-size: 13px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 25px;
+    transition: .4s;
+}
+.navmenu a:hover, :focus {
+    padding-bottom: 2px;
+    border-bottom: 3px solid whitesmoke;
+}
+
+.btnlogin {
+    width: 90px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, .2);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    color: whitesmoke;
+    font-weight: bold;
+    margin-left: 40px;
+    transition: .4s;
+}
+.btnlogin:hover {
+    background: whitesmoke;
+    color: #162938;
+}
+.btnregister {
+    width: 90px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, .2);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    color: whitesmoke;
+    font-weight: bold;
+    margin-left: 30px;
+    transition: .4s;
+}
+.btnregister:hover {
+    background: whitesmoke;
+    color: #162938;
+}
+
+.dropmenu {
+    display: none;
+}
+
+
+.formbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 530px;
+    height: 520px;
+    overflow: hidden;
+    border-radius: 20px;
+    z-index: 2;
+   
+}
+.logincon {
+    position: absolute;
+    top: 100px;
+    right: 16px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+
+}
+.registercon {
+    position: absolute;
+    top: 60px;
+    right: -520px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+
+}
+.top span {
+    color: whitesmoke;
+    font-size: small;
+    font-weight: bold;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+.top span a {
+    font-weight: bold;
+    color: whitesmoke;
+    margin-left: 5px;
+}
+.top h2 {
+    color: rgb(228, 186, 124);
+    font-size: 37px;
+    text-align: center;
+    padding: 10px 0 30px 0;
+}
+.twoforms {
+    display: flex;
+    gap: 10px;
+}
+.inputcon {
+     margin-top: 20px;
+}
+.inputfield {
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: whitesmoke;
+    height: 50px;
+    width: 100%;
+    padding: 0 10px 0 45px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: .2s ease;
+}
+.inputfield:hover, :focus {
+    background: rgba(255, 255, 255, 0.25);
+}
+::-webkit-input-placeholder {
+    color: whitesmoke;
+    font-weight: bold;
+}
+.submit {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.submit:hover{
+    background: rgba(255, 255, 255, 0.1);
+    color: whitesmoke;
+}
+.twocol {
+    display: flex;
+    justify-content: space-between;
+    color: whitesmoke;
+    font-size: small;
+    font-weight: bold;
+    margin-top: 15px;
+    accent-color: rgb(228, 166, 109);
+}
+.twocol .one {
+    display: flex;
+    gap: 5px;
+}
+.two a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+.two a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 800px) {
+    .navbtn {
+        display: none;
+    }
+    .navmenu.responsive {
+        top: 90px;
+    }
+    .navmenu {
+        position: absolute;
+        top: -900px;
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        background: rgba(255, 255, 255, .1);
+        backdrop-filter: blur(9px);
+        transition: .4s;
+    }
+    .navmenu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .dropmenu {
+        display: block;
+        cursor: pointer;
+        transition: .3s;
+        border: none;
+        border-radius: 50%;
+    } 
+    .dropmenu:hover {
+        background: rgba(238, 3, 3, 0.7);
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .wrapper {
+        min-width: 100vh;
+    }
+    .formbox {
+        width: 100%;
+        height: 500px;
+    }
+    .registercon, .logincon {
+        width: 100%;
+        padding: 0 25px;
+    }
+    .registercon .twoforms {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .wrapper {
+        width: 100%;
+    }
+    .formbox {
+        width: 100%;
+        height: 500px;
+    }
+    .registercon, .logincon {
+        width: 100%;
+        padding: 0 25px;
+    }
+    .registercon .twoforms {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+}

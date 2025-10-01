@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh; */
-    background: url(/project2/images/lux1.png)no-repeat;
+    background: url(lux1.png)no-repeat;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -283,6 +283,4 @@ body {
         flex-direction: column;
         gap: 0;
     }
-}
-
 }
